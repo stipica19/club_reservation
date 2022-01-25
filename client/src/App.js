@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await axios.get("http://localhost:5000/event");
+      const res = await axios.get("https://club-reservation.vercel.app//event");
       setEvents(res.data);
     };
     getData();
@@ -28,7 +28,9 @@ function App() {
 
   const getTable = async (id) => {
     console.log("EVENT ID : ", id);
-    const res = await axios.get(`http://localhost:5000/event/${id}`);
+    const res = await axios.get(
+      `https://club-reservation.vercel.app//event/${id}`
+    );
     setTable(res.data);
     setLoading(false);
   };
@@ -38,7 +40,7 @@ function App() {
     console.log("event==", eventChecked);
     console.log("stol===", stol);
     const res = await axios.post(
-      `http://localhost:5000/reservation/addReservation`,
+      `https://club-reservation.vercel.app//reservation/addReservation`,
       {
         name: name,
         telbroj: telbroj,
@@ -52,7 +54,7 @@ function App() {
     console.log(stol);
     if (stol) {
       const res = axios.get(
-        `http://localhost:5000/reservation/log?phonenumber=38763542702&channel=sms`
+        `https://club-reservation.vercel.app//reservation/log?phonenumber=38763542702&channel=sms`
       );
     } else {
       console.log("nije odbran stol");
@@ -62,11 +64,11 @@ function App() {
   const handlePotvrdi = () => {
     const res = axios
       .get(
-        `http://localhost:5000/reservation/verify?phonenumber=${telbroj}&code=${SmsKod}`
+        `https://club-reservation.vercel.app//reservation/verify?phonenumber=${telbroj}&code=${SmsKod}`
       )
       .then((res) => {
         const response = axios.post(
-          `http://localhost:5000/reservation/addReservation`,
+          `https://club-reservation.vercel.app//reservation/addReservation`,
           {
             name: name,
             telbroj: telbroj,
