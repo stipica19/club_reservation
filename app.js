@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import Cors from "cors";
 import twilio from "twilio";
+import path from "path";
 const app = express();
 
 import eventRoute from "./routes/eventRoute.js";
@@ -32,6 +33,19 @@ const client = new twilio(accountID, authid);
 app.use("/event", eventRoute);
 app.use("/reservation", reservationRoute);
 app.use("/table", tableRoute);
+
+app.use(express.static(path.join(__dirname, "./client/build")));
+
+app.get("*", function (_, res) {
+  res.sendFile(
+    path.join(__dirname, "./client/build/index.html"),
+    function (err) {
+      if (err) {
+        res.status(500).send(err);
+      }
+    }
+  );
+});
 
 app.listen(5000, (req, res) => {
   console.log("SERVER JE STARTOVAN NA PORTU 5000");
