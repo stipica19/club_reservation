@@ -3,11 +3,7 @@ import mongoose from "mongoose";
 import Cors from "cors";
 import twilio from "twilio";
 import path from "path";
-import { fileURLToPath } from "url";
 
-const __filename = fileURLToPath(import.meta.url);
-
-const __dirname = path.dirname(__filename);
 const app = express();
 
 import eventRoute from "./routes/eventRoute.js";
@@ -39,18 +35,19 @@ app.use("/event", eventRoute);
 app.use("/reservation", reservationRoute);
 app.use("/table", tableRoute);
 
-app.use(express.static(path.join(__dirname, "./client/build")));
+const __dirname = path.resolve();
 
-app.get("*", function (_, res) {
-  res.sendFile(
-    path.join(__dirname, "./client/build/index.html"),
-    function (err) {
-      if (err) {
-        res.status(500).send(err);
-      }
-    }
+if (true) {
+  app.use(express.static(path.join(__dirname, "client/build")));
+
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname, "./client", "build", "index.html"))
   );
-});
+} else {
+  app.get("/", (req, res) => {
+    res.send("API is running....");
+  });
+}
 
 app.listen(5000, (req, res) => {
   console.log("SERVER JE STARTOVAN NA PORTU 5000");
