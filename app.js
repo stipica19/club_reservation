@@ -37,6 +37,15 @@ app.use("/table", tableRoute);
 
 const __dirname = path.resolve();
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 if (true) {
   app.use(express.static(path.join(__dirname, "client/build")));
 
