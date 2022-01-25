@@ -3,6 +3,11 @@ import mongoose from "mongoose";
 import Cors from "cors";
 import twilio from "twilio";
 import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 const app = express();
 
 import eventRoute from "./routes/eventRoute.js";
