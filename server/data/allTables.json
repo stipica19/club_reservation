@@ -1,0 +1,132 @@
+{
+    "tables": [
+      {
+        "name": "table1",
+        "isAvailable": true,
+        "x":"150",
+        "y":"50"
+       
+      },
+      {
+        "name": "table2",
+        "isAvailable": true,
+        "x":"200",
+        "y":"50"
+      },
+      {
+        "name": "table3",
+        "isAvailable": true,
+        "x":"250",
+        "y":"50"
+      },
+      {
+        "name": "table4",
+        "isAvailable": true,
+        "x":"380",
+        "y":"50"
+      },
+      {
+        "name": "table5",
+        "isAvailable": true,
+        "x":"430",
+        "y":"50"
+      },
+      {
+        "name": "table6",
+        "isAvailable": true,
+        "x":"480",
+        "y":"50"
+      },
+      {
+        "name": "table7",
+        "isAvailable": true,
+        "x":"150",
+        "y":"110"
+      },
+      {
+        "name": "table8",
+        "isAvailable": true,
+        "x":"200",
+        "y":"110"
+      },
+      {
+        "name": "table9",
+        "isAvailable": true,
+        "x":"250",
+        "y":"110"
+      },
+      {
+        "name": "table10",
+        "isAvailable": true,
+        "x":"380",
+        "y":"110"
+      }, {
+        "name": "table11",
+        "isAvailable": true,
+        "x":"430",
+        "y":"110"
+      }, {
+        "name": "table12",
+        "isAvailable": true,
+        "x":"480",
+        "y":"110"
+      },
+      {
+        "name": "table13",
+        "isAvailable": true,
+        "x":"150",
+        "y":"170"
+      },
+      {
+        "name": "table14",
+        "isAvailable": true,
+        "x":"150",
+        "y":"230"
+      },
+      {
+        "name": "table15",
+        "isAvailable": true,
+        "x":"150",
+        "y":"290"
+      },
+      {
+        "name": "table16",
+        "isAvailable": true,
+        "x":"150",
+        "y":"350"
+      },
+      {
+        "name": "table17",
+        "isAvailable": true,
+        "x":"200",
+        "y":"350"
+      },{
+        "name": "table18",
+        "isAvailable": true,
+        "x":"250",
+        "y":"350"
+      },{
+        "name": "table19",
+        "isAvailable": true,
+        "x":"300",
+        "y":"350"
+      },
+      {
+        "name": "table20",
+        "isAvailable": true,
+        "x":"350",
+        "y":"350"
+      },
+      {
+        "name": "table21",
+        "isAvailable": true,
+        "x":"400",
+        "y":"350"
+      },{
+        "name": "table22",
+        "isAvailable": true,
+        "x":"450",
+        "y":"350"
+      }
+    ]
+  }
