@@ -1,0 +1,132 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.App {
+  background-image: url("https://app.dalekaobala.ba/stolovibg.dbe9a5d3a29e9615d0d6.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  
+}
+.active{
+ filter:brightness(0.5);
+ 
+}
+.aa{
+  background-color: red;
+  background-blend-mode: multiply;
+}
+image{
+  margin: 0px auto;
+  left: 0px;
+  right: 0px;
+  background-color: red;
+  background-blend-mode: multiply;
+ 
+}
+.im{
+  background-color: rgba(67, 0, 201, 0.5);
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 30px;
+  text-align: center;
+  
+  width: 100vw;
+  align-items: stretch;
+
+ 
+}
+.flex-item-left {
+  padding: 10px;
+  background-image: url("https://app.dalekaobala.ba/stolovibg.dbe9a5d3a29e9615d0d6.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.flex-item-left > h1{
+  color: aliceblue;
+}
+
+.flex-item-right {
+  background-image: url("https://app.dalekaobala.ba/stolovibg.dbe9a5d3a29e9615d0d6.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  flex: 70%;
+ 
+}
+.g1{
+  margin-top: 20px;
+  padding-top: 200px;
+}
+.shema{
+  align-items: flex-start;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+    height: 1400px;
+  }
+   
+}
+.aa{
+ 
+
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+.wrapper{
+  width: 100%;
+  background: rgb(248, 245, 245,0.1);
+  padding: 30px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+.dugme{
+  
+  height: 30%;
+}
+.wrapper .input-data .dugme{
+  background-color: rgb(251, 255, 3);
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  
+}
+.wrapper .input-data{
+  height: 40px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+.wrapper .input-data input{
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+.input-data input:focus ~ label,
+.input-data input:valid ~ label{
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #ffffff;
+}
+.wrapper .input-data label{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: rgb(255, 255, 255);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
